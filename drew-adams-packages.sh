@@ -47,7 +47,7 @@ packages=(
 )
 
 # The location to save the packages
-dest_dir="/home/yal/.emacs.d/lisp/"
+dest_dir="/home/yal/my-github-repos/emacswiki-packages/"
 
 # Create the directory if it does not exist
 mkdir -p "$dest_dir"
