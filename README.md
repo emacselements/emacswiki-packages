@@ -16,10 +16,11 @@ A bash script to automatically download Drew Adams' Emacs packages from EmacsWik
    ./drew-adams-packages.sh
    ```
 
-2. Add to your Emacs config:
+2. Configure Emacs (see [init-example.el](init-example.el) for complete configuration):
    ```elisp
-   (add-to-list 'load-path "~/.emacs.d/lisp/")
+   (add-to-list 'load-path "~/.emacs.d/wiki/")
    (require 'icicles)    ; Interactive completion
+   (icy-mode 1)          ; Enable Icicles
    (require 'bookmark+)  ; Enhanced bookmarks
    (require 'dired+)     ; Enhanced file manager
    ```
@@ -34,10 +35,28 @@ The script downloads 39 packages including:
 - **Frame Management** - Auto-fit frames, zooming, window commands
 - **Utilities** - Enhanced dired, grep, registers, and more
 
+## Script Options
+
+```bash
+./drew-adams-packages.sh [-s seconds] [-f] [-h]
+```
+
+- `-s seconds` : Set sleep time between downloads (default: 2)
+- `-f` : Force re-download even if files already exist
+- `-h` : Show help message
+
+## Features
+
+- Progress counter shows current/total packages
+- Automatically skips already-downloaded files (unless using `-f`)
+- Error handling with summary of failed downloads
+- Configurable delay between downloads to be respectful to EmacsWiki
+- Exit code indicates success/failure for scripting
+
 ## Requirements
 
 - Bash, curl, and internet connection
-- Packages are saved to `~/.emacs.d/lisp/` by default
+- Packages are saved to `~/.emacs.d/wiki/` by default
 
 ## Support
 
