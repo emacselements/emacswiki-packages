@@ -25,6 +25,12 @@ A bash script to automatically download Drew Adams' Emacs packages from EmacsWik
    (require 'dired+)     ; Enhanced file manager
    ```
 
+## Download Location & Updating
+
+- Packages are saved to `~/.emacs.d/wiki/` by default (edit `dest_dir` in the script to change it).
+- Rerun the script any time to refresh packages; add `-f` to re-download everything.
+- Safe to rerun: existing files are skipped unless `-f` is used.
+
 ## What's Included
 
 The script downloads 39 packages including:
