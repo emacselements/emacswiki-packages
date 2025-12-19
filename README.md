@@ -1,6 +1,6 @@
 # EmacsWiki Packages Downloader
 
-A bash script to automatically download Drew Adams' Emacs packages from EmacsWiki.
+A bash script to download a curated set of EmacsWiki packages (currently focused on Drew Adams' utilities).
 
 ## Video Tutorial
 
@@ -33,13 +33,18 @@ A bash script to automatically download Drew Adams' Emacs packages from EmacsWik
 
 ## What's Included
 
-The script downloads 39 packages including:
+The script downloads 39 EmacsWiki packages (mostly Drew Adams utilities) including:
 
 - **Icicles Suite** - Interactive completion framework
 - **Bookmark+ Suite** - Enhanced bookmarking system  
 - **Visual Enhancements** - Column highlighting, crosshairs, line highlighting
 - **Frame Management** - Auto-fit frames, zooming, window commands
 - **Utilities** - Enhanced dired, grep, registers, and more
+
+## Customize Package List
+
+- Edit the `packages` array in [drew-adams-packages.sh](drew-adams-packages.sh) to point at any EmacsWiki download filename.
+- Uses the standard EmacsWiki download URL pattern: https://www.emacswiki.org/emacs/download/<file>.
 
 ## Script Options
 
@@ -69,4 +74,4 @@ The script downloads 39 packages including:
 If you find this helpful: [Donate via PayPal](https://www.paypal.com/paypalme/revrari)
 
 ---
-*Packages by Drew Adams • Hosted on EmacsWiki*
+*Packages hosted on EmacsWiki; selection currently centers on Drew Adams' utilities*
